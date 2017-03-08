@@ -1,0 +1,67 @@
+{
+  "title": "MailChimp",
+  "description": "Online email marketing solution to manage contacts, send emails and track results.",
+  "credentials": {
+    "fields": {
+      "apiKey": {
+        "viewClass": "TextFieldView",
+        "label": "API Key",
+        "required": true,
+        "placeholder": "Mailchimp API Key"
+      }
+    }
+  },
+  "actions": {
+    "subscribe": {
+      "main": "./lib/actions/subscribe.js",
+      "title": "Add new Subscriber",
+      "fields": {
+        "listId": {
+          "viewClass": "SelectView",
+          "prompt": "Select your MailChimp List",
+          "label": "List",
+          "required": true,
+          "model": "getLists"
+        }
+      },
+      "metadata": {
+        "in": "./schemas/subscribe.in.json",
+        "out": "./schemas/subscribe.out.json"
+      }
+    },
+    "unsubscribe": {
+      "main": "./lib/actions/unsubscribe.js",
+      "title": "Unsubscribe",
+      "fields": {
+        "listId": {
+          "viewClass": "SelectView",
+          "prompt": "Select your MailChimp List",
+          "label": "List",
+          "required": true,
+          "model": "getLists"
+        }
+      },
+      "metadata": {
+        "in": "./schemas/unsubscribe.in.json",
+        "out": "./schemas/unsubscribe.out.json"
+      }
+    },
+    "upsertCustomer": {
+      "main": "./lib/actions/upsertCustomer.js",
+      "title": "Upsert Customer",
+      "fields": {
+        "storeId": {
+          "viewClass": "SelectView",
+          "prompt": "Select your MailChimp Store",
+          "label": "Store",
+          "required": true,
+          "model": "getStores"
+        }
+      },
+      "metadata": {
+        "in": "./schemas/upsertCustomer.in.json",
+        "out": "./schemas/upsertCustomer.out.json"
+      }
+    }
+  }
+}

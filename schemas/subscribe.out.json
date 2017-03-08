@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "required": true,
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "string",
+            "required": true
+        },
+        "unique_email_id": {
+            "type": "string",
+            "required": true
+        },
+        "status": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

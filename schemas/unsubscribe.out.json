@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "required": true,
+    "properties": {
+        "success": {
+            "type": "boolean",
+            "id": "result",
+            "required": true
+        }
+    }
+}

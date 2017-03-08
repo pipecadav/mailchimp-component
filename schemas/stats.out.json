@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "required": true,
+    "properties": {
+        "email": {
+            "type": "string",
+            "required": true
+        },
+        "campaign": {
+            "type": "object",
+            "required": true,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "required": true
+                },
+                "list_id": {
+                    "type": "string",
+                    "required": true
+                },
+                "title": {
+                    "type": "string",
+                    "required": true
+                },
+                "archive_url": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "events": {
+            "type": "array",
+            "required": true,
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "required": true
+                },
+                "timestamp": {
+                    "type": "date",
+                    "required": true
+                },
+                "url": {
+                    "type": "string",
+                    "required": false
+                },
+                "ip" : {
+                    "type": "string",
+                    "required": false
+                }
+            }
+        }
+    }
+}

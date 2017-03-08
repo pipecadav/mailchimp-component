@@ -1,0 +1,46 @@
+{
+  "name": "mailchimp",
+  "version": "1.0.0",
+  "description": "elastic.io component that connects to Mailchimp API (node.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test"
+  },
+  "engines": {
+    "node": "6.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elasticio/mailchimp.git"
+  },
+  "keywords": [
+    "elasticio",
+    "salesforce",
+    "REST"
+  ],
+  "author": "elastic.io GmbH",
+  "bugs": {
+    "url": "https://github.com/elasticio/mailchimp/issues"
+  },
+  "homepage": "https://github.com/elasticio/mailchimp#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "elasticio-node": "^0.0.7",
+    "elasticio-sailor-nodejs": "2.0.1",
+    "mailchimp-v3": "^1.0.2",
+    "md5": "^2.2.1",
+    "moment": "2.17.0"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-coveralls": "~1.0.1",
+    "grunt-env": "~0.4.1",
+    "grunt-istanbul": "~0.7.1",
+    "grunt-jasmine-node": "0.3.1",
+    "grunt-jscs": "^3.0.1",
+    "nock": "^9.0.2"
+  }
+}

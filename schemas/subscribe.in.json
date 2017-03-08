@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "required": true,
+    "properties": {
+        "email": {
+            "title": "Email",
+            "type": "string",
+            "required": true
+        },
+        "salutation": {
+            "title": "Salutation",
+            "type": "string",
+            "required": false
+        },
+        "firstName": {
+            "title": "First Name",
+            "type": "string",
+            "required": false
+        },
+        "lastName": {
+            "title": "Last Name",
+            "type": "string",
+            "required": false
+        },
+        "optInIP": {
+            "title": "Opt-in IP address",
+            "type": "string",
+            "required": false
+        },
+        "language": {
+            "title": "Language (ISO)",
+            "type": "string",
+            "required": false,
+            "placeholder": "en",
+            "default": "en"
+        },
+        "email_type": {
+            "title": "Email type",
+            "type": "string",
+            "required": true,
+            "enum": [
+                "html",
+                "text"
+            ]
+        },
+        "notes": {
+            "title": "Notes",
+            "type": "string",
+            "required": false
+        }
+    }
+}
