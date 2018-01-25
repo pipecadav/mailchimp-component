@@ -19,8 +19,18 @@ describe('Subscribe action', function () {
                     "id": "listID",
                     "email_address": "foo@bar.com",
                     "status": "subscribed",
-                    "merge_fields": {"EMAIL": "foo@bar.com", "OPTIN_TIME": /20/, "MC_LANGUAGE": "en"},
-                    "email_type": "html"
+                    "merge_fields": {
+                        "EMAIL": "foo@bar.com", 
+                        "FNAME": "Renat",
+                        "LNAME": "Zubairov",
+                        "SALUTATION": "MR",
+                        "OPTIN_IP": "192.168.1.1",
+                        "OPTIN_TIME": /20/, 
+                        "MC_LANGUAGE": "en",
+                        "MC_NOTES": "Notes"
+                    },
+                    "email_type": "html",
+                    "ip_opt": "192.168.1.1",
                 }).reply(200, memberPutReply);
 
         runs(function () {
