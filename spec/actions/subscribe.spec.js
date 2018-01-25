@@ -14,7 +14,24 @@ describe('Subscribe action', function () {
 
     it('should emit (data and end events on success create request - case: http 200', function () {
         nock('https://us5.api.mailchimp.com', {"encodedQueryParams": true})
-            .put('/3.0//lists/listID/members/f3ada405ce890b6f8204094deb12d8a8').reply(200, memberPutReply);
+            .put('/3.0//lists/listID/members/f3ada405ce890b6f8204094deb12d8a8',
+                {
+                    "id": "listID",
+                    "email_address": "foo@bar.com",
+                    "status": "subscribed",
+                    "merge_fields": {
+                        "EMAIL": "foo@bar.com", 
+                        "FNAME": "Renat",
+                        "LNAME": "Zubairov",
+                        "SALUTATION": "MR",
+                        "OPTIN_IP": "192.168.1.1",
+                        "OPTIN_TIME": /20/, 
+                        "MC_LANGUAGE": "en",
+                        "MC_NOTES": "Notes"
+                    },
+                    "email_type": "html",
+                    "ip_opt": "192.168.1.1",
+                }).reply(200, memberPutReply);
 
         runs(function () {
             action.process.call(self, {
