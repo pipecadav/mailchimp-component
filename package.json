@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elasticio/mailchimp.git"
+    "url": "git+https://github.com/pipecadav/mailchimp-component.git"
   },
   "keywords": [
     "elasticio",
-    "salesforce",
+    "mailchimp",
     "REST"
   ],
   "author": "elastic.io GmbH",
