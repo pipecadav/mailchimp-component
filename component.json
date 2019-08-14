@@ -16,6 +16,19 @@
       "main": "./lib/actions/subscribe.js",
       "title": "Add new Subscriber",
       "fields": {
+        "size" : {
+          "label": "Amount",
+          "required": true,
+          "viewClass": "SelectView",
+          "model": {
+            "10": "10",
+            "20": "20",
+            "30": "30",
+            "50": "50",
+            "100": "100"
+          },
+          "prompt": "Select amount of lists to retrieve"
+        },
         "listId": {
           "viewClass": "SelectView",
           "prompt": "Select your MailChimp List",
